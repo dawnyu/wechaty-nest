@@ -1,0 +1,129 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add qrcode-termina
+
+PATH: 
+  /Users/dawns/flutter_dir/flutter/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/dawns/flutter_dir/flutter/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/bin:.:/Users/dawns/Library/Android/sdk/tools:/Users/dawns/Library/Android/sdk/platform-tools:/Users/dawns/flutter_dir/flutter/.pub-cache/bin:.:/Users/dawns/Library/Android/sdk/tools:/Users/dawns/Library/Android/sdk/platform-tools:/Users/dawns/Library/Android/sdk/platform-tools:/Users/dawns/Library/Android/sdk/tools:/Users/dawns/flutter_dir/flutter/.pub-cache/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  10.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: http://registry.npm.taobao.org/qrcode-termina: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141224:19)
+      at ontimeout (timers.js:436:11)
+      at tryOnTimeout (timers.js:300:5)
+      at listOnTimeout (timers.js:263:5)
+      at Timer.processTimers (timers.js:223:10)
+
+npm manifest: 
+  {
+    "name": "wechat-robot",
+    "version": "1.0.0",
+    "description": "description",
+    "license": "MIT",
+    "scripts": {
+      "build": "rimraf dist & tsc -p tsconfig.build.json",
+      "format": "prettier --write \"src/**/*.ts\"",
+      "dev": "cross-env NODE_ENV=dev nodemon",
+      "start:dev": "cross-env NODE_ENV=dev nodemon",
+      "start:debug": "nodemon --config nodemon-debug.json",
+      "start:prod": "pm2 start pm2.config.js",
+      "lint": "tslint -p tsconfig.json -c tslint.json",
+      "test": "jest",
+      "test:watch": "jest --watch",
+      "test:cov": "jest --coverage",
+      "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+      "test:e2e": "jest --config ./test/jest-e2e.json"
+    },
+    "dependencies": {
+      "@grpc/proto-loader": "^0.5.4",
+      "@nestjs/common": "^7.0.9",
+      "@nestjs/core": "^7.0.9",
+      "@nestjs/jwt": "^7.0.0",
+      "@nestjs/microservices": "^7.0.9",
+      "@nestjs/passport": "^7.0.0",
+      "@nestjs/platform-express": "^7.0.9",
+      "compression": "^1.7.4",
+      "cross-env": "^7.0.2",
+      "dotenv": "^8.2.0",
+      "eslint-plugin-typescript": "^0.14.0",
+      "express-session": "^1.17.1",
+      "flyio": "^0.6.14",
+      "global": "^4.4.0",
+      "helmet": "^3.22.0",
+      "joi": "^14.3.1",
+      "js-base64": "^2.5.2",
+      "log4js": "^6.3.0",
+      "md5": "^2.2.1",
+      "moment": "^2.24.0",
+      "nodemailer": "^6.4.6",
+      "nodemon": "^2.0.3",
+      "parseurl": "^1.3.3",
+      "passport": "^0.4.1",
+      "passport-jwt": "^4.0.0",
+      "passport-local": "^1.0.0",
+      "prettier": "^2.0.5",
+      "qs": "^6.9.3",
+      "reflect-metadata": "^0.1.13",
+      "request": "^2.88.2",
+      "rxjs": "^6.5.5",
+      "tinify": "^1.6.0-beta.2",
+      "typescript": "^3.8.3",
+      "wechaty": "^0.38.4",
+      "wechaty-puppet-padplus": "^0.6.3"
+    },
+    "devDependencies": {
+      "@nestjs/testing": "^7.0.9",
+      "@types/express": "^4.17.6",
+      "@types/jest": "^25.2.1",
+      "@types/node": "^13.13.4",
+      "@types/supertest": "^2.0.8",
+      "decompress": "^4.2.1",
+      "gulp": "^4.0.2",
+      "jest": "^25.4.0",
+      "rimraf": "^3.0.2",
+      "supertest": "^4.0.2",
+      "ts-jest": "^25.4.0",
+      "ts-loader": "^7.0.1",
+      "ts-node": "8.9.1",
+      "tsconfig-paths": "^3.9.0",
+      "tslint": "6.1.2"
+    },
+    "jest": {
+      "moduleFileExtensions": [
+        "js",
+        "json",
+        "ts"
+      ],
+      "rootDir": "src",
+      "testRegex": ".spec.ts$",
+      "transform": {
+        "^.+\\.(t|j)s$": "ts-jest"
+      },
+      "coverageDirectory": "../coverage",
+      "testEnvironment": "node"
+    },
+    "commitlint": {
+      "extends": [
+        "@commitlint/config-conventional"
+      ],
+      "rules": {}
+    },
+    "husky": {
+      "hooks": {
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
